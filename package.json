@@ -1,0 +1,25 @@
+{
+  "name": "campers_leaderboard",
+  "version": "1.0.0",
+  "description": "Free Code Camp campers leaderboard.",
+  "engines": {
+    "node": "6.11.0"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+   "author": "mar-bi",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "express": "4.15.2"
+  },
+  "keywords": [
+    "react",
+    "sass",
+    "node"
+  ]  
+}
