@@ -2,12 +2,17 @@
 ## FCC: Campers' Leaderboard  
 ---  
 FreeCodeCamp project **"Build a Campers Leaderboar"**  
-using:
+
+It displays top 100 campers who earned more points during last 30 days or 
+during all the time.  
+
+Web tools and framework used in a project:
 * ReactJS,
 * Sass,
 * Ajax,
+* AxiosJS,
 * NodeJS
 
-[Link to application]()
+[Link to the application](https://serene-ocean-19499.herokuapp.com/)
 
 
