@@ -1,0 +1,178 @@
+//Variables
+$tablewidth: 800px;
+$mediumtablewidth: 450px;
+$smalltablewidth: 300px;
+
+//colors
+$grey: #aaaaaa;
+$green: #466938;
+$yellowgreen: #ccc87d;
+$blue: #3d7c89;
+$brown: #6d4838;
+$prettyred: #cc0000;
+
+//breakpoints
+$mediumscreen: 830px;
+$smallscreen: 480px;
+
+
+//Mixins
+@mixin border($width, $bord-color, $radius:0) {
+	border: {
+		color: $bord-color;
+		width: $width;
+		style: solid;
+	};
+	border-radius: $radius;
+	
+}
+
+//Styles
+body {
+	font-family: Helvetica, sans-serif;
+	font-size: 16px;
+	background-color: $grey;
+}
+
+table {
+	display: block;
+	width: $tablewidth;
+	margin: 10px auto;
+	border-collapse: collapse;
+	background-color: $green;
+	@media screen and (max-width: $mediumscreen) {
+		width: $mediumtablewidth;
+	}
+	@media screen and (max-width: $smallscreen) {
+		width: $smalltablewidth;
+	}
+}
+
+td, th {
+	@include border(1px, $brown);
+}
+
+td {
+	text-align: center;
+	color: darken($brown, 20%);
+	&.userinfo {
+		text-align: left;
+	}
+	&.loading {
+		height: 200px;
+		font-size: 2em;
+		font-weight: 600;
+		color: $green;
+	}
+	@media screen and (max-width: $smallscreen) {
+		font-size: 0.8em;
+	}
+}
+
+tr {
+	background-color: lighten($green, 50%);
+	&:nth-child(even) {
+		background-color: lighten($green, 65%);
+	}
+}
+
+caption {
+	font-size: 1.5em;
+	text-align: center;
+	font-weight: 600;
+	margin: 10px 0;
+	color: lighten($grey, 35%);
+	@media screen and (max-width: $smallscreen) {
+		font-size: 1.1em;
+		padding: 15px;
+		margin: 5px 0;
+	}
+	a {
+		text-decoration: none;
+		font-style: italic;
+		font-size: 0.7em;
+		&:visited {
+			color: inherit;
+		}
+	}
+}
+
+.table-header {
+	background-color: lighten($blue, 25%);
+	th {
+		width: $tablewidth / 4;
+	  padding: 5px;
+	  font-size: 1.1em;
+	  color: $brown;
+	  @media screen and (max-width: $mediumscreen) {
+			width: ($mediumtablewidth - 250) / 2;
+		}
+		@media screen and (max-width: $smallscreen) {
+			width: ($smalltablewidth - 180) / 2;
+			font-size: 0.8em;
+		}
+
+	 	&#camper-name {
+			width: 350px;
+			@media screen and (max-width: $mediumscreen) {
+				width: 200px;
+			}
+			@media screen and (max-width: $smallscreen) {
+				width: 150px;
+			}
+		}
+
+	  a {
+			color: inherit;
+			&:visited:active {
+				color: lighten($grey, 50%); 
+			}
+	  } 
+	}
+	
+	#record {
+		width: 50px;
+		@media screen and (max-width: $smallscreen) {
+			width: 30px;
+		}
+	}
+}
+
+
+.avatar {
+	width: 50px;
+	height: 50px;
+	@include border(2px, #fff, 5px);
+	margin: 10px;
+	vertical-align: middle;
+	@media screen and (max-width: $mediumscreen) {
+		width: 40px;
+		height: 40px;
+		display: block;
+		margin: 8px;
+	}
+}
+
+.username {
+	display: inline-block;
+	font-size: 1.2em;
+	color: #000;
+	&:active {
+		color: #000;
+	}
+	@media screen and (max-width: $mediumscreen) {
+		font-size: 1em;
+		margin: 0 5px 8px 5px;
+	}
+	@media screen and (max-width: $smallscreen) {
+		font-size: 1em;
+	}
+}
+
+span {
+	font-size: 1em;
+	&.active {
+		color: $prettyred;
+	}
+}
+

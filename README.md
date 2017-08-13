@@ -13,6 +13,8 @@ Web tools and framework used in a project:
 * AxiosJS,
 * NodeJS
 
+The source files are in **Source** folder.
+
 [Link to the application](https://serene-ocean-19499.herokuapp.com/)
 
 
